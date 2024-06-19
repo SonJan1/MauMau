@@ -1,7 +1,7 @@
 package org.example;
 
 public enum Rank {
-    ACE("Ass"),
+    ACE("As"),
     KING("König"),
     QUEEN("Dame"),
     JACK("Bube"),
