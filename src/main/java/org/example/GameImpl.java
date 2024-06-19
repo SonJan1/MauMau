@@ -99,7 +99,7 @@ public class GameImpl implements Game {
             Player player = iterator.next();
             if (player instanceof HumanPlayer && player.getName().equals(playerName)) {
                 iterator.remove();
-                break; // Удаляем только первого найденного игрока с указанным именем
+                break;
             }
         }
     }

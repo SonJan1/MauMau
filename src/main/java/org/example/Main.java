@@ -22,7 +22,7 @@ public class Main {
 //        }
 
         String[] playerNames = {"Player 1", "Player 2", "Player 3"};
-        boolean[] isHumanPlayers = {true, false, false}; // Player 1 is human, Player 2 and Player 3 are computers
+        boolean[] isHumanPlayers = {true, false, false};
         Game game = new GameImpl(playerNames, isHumanPlayers);
         game.start();
     }
