@@ -2,8 +2,6 @@ package org.example.interfaces;
 
 import org.example.Card;
 
-import java.util.List;
-
 /**
  * The {@code Game} interface represents the core functionality required to manage and play a card game.
  */
