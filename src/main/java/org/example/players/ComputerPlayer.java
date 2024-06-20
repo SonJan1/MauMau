@@ -79,6 +79,13 @@ public class ComputerPlayer implements Player {
     }
 
     @Override
+    public void playCard(Game game, Card card) {
+        removeCardFromHand(card);
+        game.setTopCard(card);
+        game.handleSpecialCard(this, card);
+    }
+
+    @Override
     public String toString() {
         return "ComputerPlayer{" +
                 "name='" + name + '\'' +

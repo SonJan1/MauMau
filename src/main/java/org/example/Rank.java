@@ -5,23 +5,29 @@ package org.example;
  * Each rank has a corresponding name.
  */
 public enum Rank {
-    ACE("As"),
-    KING("König"),
-    QUEEN("Dame"),
-    JACK("Bube"),
-    TEN("10"),
-    NINE("9"),
-    EIGHT("8"),
-    SEVEN("7");
+    ACE("As", 1),
+    KING("König", 10),
+    QUEEN("Dame", 10),
+    JACK("Bube", 10),
+    TEN("10", 10),
+    NINE("9", 10),
+    EIGHT("8", 8),
+    SEVEN("7", 7);
 
     private final String name;
+    private final int value;
 
-    Rank(String name) {
+    Rank(String name, int value) {
         this.name = name;
+        this.value = value;
     }
 
     public String getName() {
         return name;
+    }
+
+    public int getValue() {
+        return value;
     }
 
     @Override

@@ -47,4 +47,12 @@ public interface Game {
      *             It replaces the current top card with the played card, updating the game state accordingly.
      */
     void setTopCard(Card card);
+
+    /**
+     * Handles the effects of playing a special card.
+     *
+     * @param player the player who played the card
+     * @param card   the special card played
+     */
+    void handleSpecialCard(Player player, Card card);
 }

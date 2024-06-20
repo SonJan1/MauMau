@@ -66,4 +66,12 @@ public interface Player {
      * Players may accumulate score points throughout the game based on their performance or actions.
      */
     int getScore();
+
+    /**
+     * Plays a card during the player's turn.
+     *
+     * @param game the current game instance
+     * @param card the card to play
+     */
+    void playCard(Game game, Card card);
 }

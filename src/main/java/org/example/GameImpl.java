@@ -15,6 +15,8 @@ public class GameImpl implements Game {
     private List<Player> players;
     private Deck deck;
     private Card topCard;
+    private boolean clockwise = true;
+    private Suit wishedSuit;
 
     /**
      * Constructs a new {@code GameImpl} with the specified player names and types.
@@ -131,5 +133,71 @@ public class GameImpl implements Game {
      */
     public List<Player> getPlayers() {
         return players;
+    }
+
+    private int getNextPlayerIndex(int currentPlayerIndex) {
+        if (clockwise) {
+            return (currentPlayerIndex + 1) % players.size();
+        } else {
+            return (currentPlayerIndex - 1 + players.size()) % players.size();
+        }
+    }
+
+    /**
+     * Handles the effects of playing a special card.
+     *
+     * @param player the player who played the card
+     * @param card   the special card played
+     */
+    public void handleSpecialCard(Player player, Card card) {
+        switch (card.getRank()) {
+            case SEVEN:
+                handleSeven(player);
+                break;
+            case EIGHT:
+                handleEight(player);
+                break;
+            case NINE:
+                handleNine();
+                break;
+            case JACK:
+                handleJack(player);
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void handleSeven(Player player) {
+        int cardsToDraw = 2;
+        Player nextPlayer = players.get(getNextPlayerIndex(players.indexOf(player)));
+        while (nextPlayer.getHand().stream().anyMatch(card -> card.getRank() == Rank.SEVEN)) {
+            Card sevenCard = nextPlayer.getHand().stream().filter(card -> card.getRank() == Rank.SEVEN).findFirst().get();
+            nextPlayer.playCard(this, sevenCard);
+            cardsToDraw += 2;
+            nextPlayer = players.get(getNextPlayerIndex(players.indexOf(nextPlayer)));
+        }
+        for (int i = 0; i < cardsToDraw; i++) {
+            nextPlayer.addCardToHand(deck.drawCard());
+        }
+    }
+
+    private void handleEight(Player player) {
+        players.remove(player);
+        System.out.println(player.getName() + " has been removed from the game.");
+    }
+
+    private void handleNine() {
+        clockwise = !clockwise;
+        System.out.println("Direction of play has been reversed.");
+    }
+
+    private void handleJack(Player player) {
+        System.out.println("Jack played. Player " + player.getName() + " can wish for a suit.");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Choose a suit: DIAMOND, HEARTS, CLUBS, SPADES");
+        String suitChoice = scanner.nextLine().toUpperCase();
+        wishedSuit = Suit.valueOf(suitChoice);
+        System.out.println("Player " + player.getName() + " wished for " + wishedSuit);
     }
 }

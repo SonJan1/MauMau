@@ -83,9 +83,16 @@ public class HumanPlayer implements Player {
     public int getScore() {
         int score = 0;
         for (Card card : hand) {
-            score += card.getRank().ordinal();
+            score += card.getRank().getValue();
         }
         return score;
+    }
+
+    @Override
+    public void playCard(Game game, Card card) {
+        removeCardFromHand(card);
+        game.setTopCard(card);
+        game.handleSpecialCard(this, card);
     }
 
     @Override
