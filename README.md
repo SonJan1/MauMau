@@ -3,12 +3,12 @@ Einleitung
 Der "Mau Mau Automat" ist eine Java-Konsolenanwendung, die das Kartenspiel "Mau Mau" ermöglicht. Das Spiel verwendet ein Standard-Skatkartenblatt und ermöglicht es, mit bis zu drei Spielern gleichzeitig zu spielen, wobei jeder Spieler entweder ein menschlicher Spieler oder ein computergesteuerter Spieler sein kann.
 
 # Installation
-Die Anwendung erfordert eine JDK-Version 11 oder höher.
+Die Anwendung erfordert eine JDK-Version 19 oder höher.
 
 - Laden Sie das Projekt von GitHub herunter oder klonen Sie es mit Git:
 `git clone https://github.com/SonJan1/MauMau.git`
 - Öffnen Sie das Projekt in Ihrer bevorzugten Entwicklungsumgebung (z. B. IntelliJ IDEA, Eclipse).
-- Stellen Sie sicher, dass Ihre IDE auf JDK 11 oder höher eingestellt ist.
+- Stellen Sie sicher, dass Ihre IDE auf JDK 19 oder höher eingestellt ist.
 - Führen Sie das Spiel aus der Hauptklasse Main aus.
 
 # Spielanleitung
@@ -17,6 +17,7 @@ Es können bis zu drei Spieler teilnehmen:
 - Spieler 1: Menschlicher Spieler
 - Spieler 2: Kann entweder ein menschlicher Spieler oder ein computergesteuerter Spieler sein
 - Spieler 3: Computergesteuerter Spieler
+  
 Die Art der Spieler (menschlich oder Computer) wird beim Start des Spiels festgelegt.
 
 # Starten eines Spiels
