@@ -8,7 +8,7 @@ Die Anwendung erfordert eine JDK-Version 19 oder höher.
 - Laden Sie das Projekt von GitHub herunter oder klonen Sie es mit Git:
 `git clone https://github.com/SonJan1/MauMau.git`
 - Öffnen Sie das Projekt in Ihrer bevorzugten Entwicklungsumgebung (z. B. IntelliJ IDEA, Eclipse).
-- Stellen Sie sicher, dass Ihre IDE auf JDK 11 oder höher eingestellt ist.
+- Stellen Sie sicher, dass Ihre IDE auf JDK 19 oder höher eingestellt ist.
 - Führen Sie das Spiel aus der Hauptklasse Main aus.
 
 # Spielanleitung
