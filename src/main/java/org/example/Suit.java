@@ -1,5 +1,9 @@
 package org.example;
 
+/**
+ * The {@code Suit} enum represents the suit of a playing card in a standard Skat deck.
+ * Each suit has a corresponding name.
+ */
 public enum Suit {
     DIAMOND("Ecken"),
     HEARTS("Herzen"),
@@ -12,7 +16,7 @@ public enum Suit {
         this.name = name;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 

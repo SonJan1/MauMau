@@ -7,11 +7,21 @@ import org.example.players.PlayerFactory;
 
 import java.util.*;
 
+/**
+ * The {@code GameImpl} class implements the {@code Game} interface and represents the main game logic for a card game.
+ * It manages the players, the deck, and the gameplay mechanics.
+ */
 public class GameImpl implements Game {
     private List<Player> players;
     private Deck deck;
     private Card topCard;
 
+    /**
+     * Constructs a new {@code GameImpl} with the specified player names and types.
+     *
+     * @param playerNames    an array of player names
+     * @param isHumanPlayers an array of booleans indicating whether each player is human (true) or computer (false)
+     */
     public GameImpl(String[] playerNames, boolean[] isHumanPlayers) {
         this.players = new ArrayList<>();
         for (int i = 0; i < playerNames.length; i++) {
@@ -89,11 +99,21 @@ public class GameImpl implements Game {
         }
     }
 
+    /**
+     * Adds a human player to the game.
+     *
+     * @param playerName the name of the player to add
+     */
     public void addHumanPlayer(String playerName) {
         Player player = PlayerFactory.createPlayer(playerName, true);
         players.add(player);
     }
 
+    /**
+     * Removes a human player from the game by their name.
+     *
+     * @param playerName the name of the player to remove
+     */
     public void removeHumanPlayer(String playerName) {
         for (Iterator<Player> iterator = players.iterator(); iterator.hasNext(); ) {
             Player player = iterator.next();
@@ -102,5 +122,14 @@ public class GameImpl implements Game {
                 break;
             }
         }
+    }
+
+    /**
+     * Gets the list of players in the game.
+     *
+     * @return the list of players
+     */
+    public List<Player> getPlayers() {
+        return players;
     }
 }

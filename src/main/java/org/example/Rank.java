@@ -1,5 +1,9 @@
 package org.example;
 
+/**
+ * The {@code Rank} enum represents the rank of a playing card in a standard Skat deck.
+ * Each rank has a corresponding name.
+ */
 public enum Rank {
     ACE("As"),
     KING("König"),

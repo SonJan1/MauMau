@@ -7,6 +7,9 @@ import org.example.interfaces.Player;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents a computer player in the Mau Mau card game.
+ */
 public class ComputerPlayer implements Player {
     private final String name;
     private final List<Card> hand;
@@ -44,7 +47,6 @@ public class ComputerPlayer implements Player {
     private boolean canPlayCard(Card chosenCard, Card topCard) {
         return chosenCard.getSuit() == topCard.getSuit() || chosenCard.getRank() == topCard.getRank();
     }
-
 
     @Override
     public List<Card> getHand() {

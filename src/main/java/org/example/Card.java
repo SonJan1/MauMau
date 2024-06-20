@@ -1,5 +1,8 @@
 package org.example;
 
+/**
+ * The {@code Card} class represents a single playing card with a rank and suit.
+ */
 public class Card {
     private final Rank rank;
     private final Suit suit;
