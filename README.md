@@ -17,6 +17,7 @@ Es können bis zu drei Spieler teilnehmen:
 - Spieler 1: Menschlicher Spieler
 - Spieler 2: Kann entweder ein menschlicher Spieler oder ein computergesteuerter Spieler sein
 - Spieler 3: Computergesteuerter Spieler
+  
 Die Art der Spieler (menschlich oder Computer) wird beim Start des Spiels festgelegt.
 
 # Starten eines Spiels
