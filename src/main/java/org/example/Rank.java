@@ -5,14 +5,14 @@ package org.example;
  * Each rank has a corresponding name.
  */
 public enum Rank {
-    ACE("As", 1),
-    KING("König", 10),
-    QUEEN("Dame", 10),
-    JACK("Bube", 10),
+    ACE("As", 11),
+    KING("König", 4),
+    QUEEN("Dame", 3),
+    JACK("Bube", 2),
     TEN("10", 10),
-    NINE("9", 10),
-    EIGHT("8", 8),
-    SEVEN("7", 7);
+    NINE("9", 0),
+    EIGHT("8", 0),
+    SEVEN("7", 0);
 
     private final String name;
     private final int value;
