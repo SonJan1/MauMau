@@ -5,10 +5,10 @@ package org.example;
  * Each suit has a corresponding name.
  */
 public enum Suit {
-    DIAMONDS("Ecken"),
-    HEARTS("Herzen"),
-    CLUBS("Kreuze"),
-    SPADES("Piks");
+    DIAMONDS("Ecken ♦"),
+    HEARTS("Herzen ♥"),
+    CLUBS("Kreuze ♣"),
+    SPADES("Piks ♠");
 
     private final String name;
 
